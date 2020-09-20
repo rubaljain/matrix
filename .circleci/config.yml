@@ -10,10 +10,10 @@ jobs:
       - checkout
       - run:
           command: sudo python setup.py install
-          name: Install 
+          name: Install as Python Package 
       - run:
           command: matrix -d "/home/circleci/project/testfiles"
-          name: Run utility
+          name: Run Utility
 
 workflows:
   main:
