@@ -36,11 +36,11 @@ regexes = {
 try:
       opts, args = getopt.getopt(sys.argv[1:],"hd:",["dir="])
 except getopt.GetoptError:
-      print 'matrix -d <absolute_directory_path>'
+      print ('matrix -d <absolute_directory_path>')
       sys.exit(2)
 for opt, arg in opts:
   if opt == '-h':
-     print 'matrix -d <absolute_directory_path>'
+     print ('matrix -d <absolute_directory_path>')
      sys.exit()
   elif opt in ("-d"):
      path = arg
