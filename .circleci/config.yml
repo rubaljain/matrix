@@ -11,6 +11,9 @@ jobs:
       - run:
           command: sudo python setup.py install
           name: Install 
+      - run:
+          command: matrix
+          name: Run utility
 
 workflows:
   main:
