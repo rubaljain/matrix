@@ -12,7 +12,7 @@ jobs:
           command: sudo python setup.py install
           name: Install as Python Package 
       - run:
-          command: matrix -d "home/circleci/project/testfiles"
+          command: matrix -d "/home/circleci/project/testfiles"
           name: Run Utility
 
 workflows:
