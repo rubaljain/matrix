@@ -15,7 +15,7 @@ jobs:
           command: cd testfiles
           name: Navigate to test files folder 
       - run:
-          command: matrix
+          command: ls
           name: Run utility
 
 workflows:
