@@ -11,6 +11,7 @@ jobs:
       - run:
           command: cd matrix
           name: Navigate
+      - run:
           command: sudo python setup.py install
           name: Install 
 
