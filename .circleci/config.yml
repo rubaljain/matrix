@@ -12,7 +12,7 @@ jobs:
           command: sudo python setup.py install
           name: Install
       - run:
-          command: cd testfiles/
+          command: ls
           name: Navigate to test files folder 
       - run:
           command: matrix
