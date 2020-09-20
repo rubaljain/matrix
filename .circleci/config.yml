@@ -11,7 +11,7 @@ jobs:
       - run:
           command: cd matrix
           name: Navigate
-	  command: sudo python setup.py install
+          command: sudo python setup.py install
 	  name: Install 
 
 workflows:
