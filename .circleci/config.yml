@@ -12,10 +12,10 @@ jobs:
           command: sudo python setup.py install
           name: Install
       - run:
-          command: cd /testfiles
+          command: cd testfiles/
           name: Navigate to test files folder 
       - run:
-          command: ls
+          command: matrix
           name: Run utility
 
 workflows:
