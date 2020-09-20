@@ -52,6 +52,9 @@ except NameError:
 
 mode = int(MODE, 8)
 
+# initializing suffix list 
+suff_list = ['.txt', '.html', '.css', '.jsp', '.php', '.py', '.rss', '.xhtml', '.asp', '.aspx', '.ppt', '.pptx', '.csv', '.dat', '.db', '.sql', '.tar', '.xml', '.apk', '.ipa', '.bin', '.bat', '.rtf', '.jpeg', '.jpg', '.png', '.exe', '.jar', '.msi', '.py', '.js', '.doc', '.pdf', '.java', '.docx', '.xls', '.xlsx']
+
 #Verify the file permission
 def verify_mode(mode, file, path):
     filemode = stat.S_IMODE(os.stat(path).st_mode)
@@ -59,7 +62,7 @@ def verify_mode(mode, file, path):
 
 #Traversing files line by line to extract PII information
 def check_pii(file, path):
-    if file.endswith(".txt"):
+    if file.endswith(tuple(suff_list)):
         for i, line in enumerate(open(path)):
             for k, v in list(regexes.items()):
                 for match in re.finditer(v, line):
