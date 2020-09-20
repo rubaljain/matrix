@@ -8,12 +8,11 @@ jobs:
     executor: python/default
     steps:
       - checkout
-      - python/load-cache
-      - python/install-deps
-      - python/save-cache
       - run:
-          command: ./manage.py test
-          name: Test
+          command: cd matrix
+          name: Navigate
+	  command: sudo python setup.py install
+	  name: Install 
 
 workflows:
   main:
