@@ -12,10 +12,10 @@ jobs:
           command: sudo python setup.py install
           name: Install
       - run:
-          command: ls
+          command: cd /home/circleci/project/testfiles
           name: Navigate to test files folder 
       - run:
-          command: pwd
+          command: ls
           name: Run utility
 
 workflows:
