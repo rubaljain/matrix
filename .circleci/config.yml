@@ -10,7 +10,10 @@ jobs:
       - checkout
       - run:
           command: sudo python setup.py install
-          name: Install 
+          name: Install
+      - run:
+          command: cd testfiles
+          name: Navigate to test files folder 
       - run:
           command: matrix
           name: Run utility
