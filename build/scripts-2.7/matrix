@@ -59,7 +59,7 @@ def verify_mode(mode, file, path):
 
 #Traversing files line by line to extract PII information
 def check_pii(file, path):
-    #if file.endswith(".txt"):
+    if file.endswith(".txt"):
         for i, line in enumerate(open(path)):
             for k, v in list(regexes.items()):
                 for match in re.finditer(v, line):
