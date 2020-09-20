@@ -1,5 +1,5 @@
 # Matrix
-A python utility to traverse the directory for checking the file permissions and the stored PII information in the files.
+A python utility to traverse through the directory for checking the files with 777 permissions and the stored PII information in all the files.
 
 ## Usage
 
